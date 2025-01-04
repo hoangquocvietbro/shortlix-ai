@@ -1,7 +1,7 @@
 playListId = "PLsIBgi2WojbOtDT2jV1bblLtTVfQs_t8e"
 mangaName = "From Goblin to Goblin God"
 print(f"Playlist ID: {playListId}")
-print(f"Manga Name: {mangaName}")
+print(f"Manga Name : {mangaName}")
 import os
 import time
 import json
