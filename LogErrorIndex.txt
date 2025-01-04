@@ -14,7 +14,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import TimeoutException, StaleElementReferenceException, WebDriverException
 import pprint
-from dotenv import load_dotenv
 from datetime import datetime, timedelta
 import threading
 import psutil
