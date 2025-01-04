@@ -381,7 +381,6 @@ def delete_specific_lock_files(user_data_dir):
                 except Exception as e:
                     print(f"Failed to delete {file_path}: {e}")
 close_existing_chrome_instances()
-!pkill chrome
 id = 'hoangquocviettech'
 pw = 'Viet@02112001#'
 chromedriver_autoinstaller.install()
