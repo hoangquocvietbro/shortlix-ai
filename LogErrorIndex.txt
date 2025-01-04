@@ -380,6 +380,10 @@ def delete_specific_lock_files(user_data_dir):
                 except Exception as e:
                     print(f"Failed to delete {file_path}: {e}")
 close_existing_chrome_instances()
+chrome_path = "/opt/google/chrome/google-chrome"
+
+# Cài đặt chromedriver
+chromedriver_path = chromedriver_path = chromedriver_autoinstaller.install()
 id = 'hoangquocviettech'
 pw = 'Viet@02112001#'
 chromedriver_autoinstaller.install()
@@ -397,7 +401,11 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 options.add_experimental_option('detach', True)
 options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36')
 delete_specific_lock_files(user_data_dir)
-browser = webdriver.Chrome(options=options)
+# Chỉ định đường dẫn tới Chrome binary
+options.binary_location = chrome_path
+
+# Khởi tạo trình duyệt với chromedriver path
+browser = webdriver.Chrome(executable_path=chromedriver_path, options=options)
 url = "https://colab.research.google.com/drive/1q7hG59Wcv41c2WKFgF9PPKMcWhuvTYQi#scrollTo=XDCFa07PErJl"
 browser.get(url)
 try:
