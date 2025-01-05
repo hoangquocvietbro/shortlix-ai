@@ -384,8 +384,8 @@ chrome_path = "/opt/google/chrome/google-chrome"
 
 # Cài đặt chromedriver
 chromedriver_path = chromedriver_path = chromedriver_autoinstaller.install()
-id = 'hoangquocviettech'
-pw = 'Viet@02112001#'
+id = ''
+pw = ''
 chromedriver_autoinstaller.install()
 #pprint.pprint(chromedriver_autoinstaller.get_chrome_version())
 options = webdriver.ChromeOptions()
